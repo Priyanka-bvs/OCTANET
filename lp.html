@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" dir="ltr"> 
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A platform to share your story</title>
+    <link rel="stylesheet" href="lp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">HOPE</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#join">Join</a>
+          <a href="#contactus">Contact</a>
+        </div>
+      </div>
+    </header>
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+      });
+
+      // Smooth scrolling for navigation links
+      const navLinks = document.querySelectorAll('.navigation-items a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', smoothScroll);
+      });
+
+      function smoothScroll(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        const navigationHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = targetElement.offsetTop - navigationHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+      }
+
+      // Read More functionality
+      const readMoreLink = document.querySelector(".read-more");
+      const hiddenContent = document.querySelector(".hidden-content");
+      readMoreLink.addEventListener("click", () => {
+        hiddenContent.classList.toggle("show");
+      });
+    </script>
+    
+    <section class="home">
+      <video class="video-slide" src="production_id_4524595 (1080p).mp4" autoplay muted loop></video>
+      <div class="content">
+        <h1>What is your<br><span>story?</span></h1>
+        <p>Are you tired of carrying the weight of your emotions alone, silently longing for someone to understand and heal the wounds of your inner child? Look no further, for your search ends here. Welcome to HOPE, the platform that holds out a hand to guide you through the darkness and bring solace to your soul. HOPE is more than just a website; it's a lifeline, connecting you with compassionate therapists who genuinely care - and it won't cost you a penny. The best part is, you can share your story. Who knows, maybe your story might inspire many people. So, are you ready to heal with HOPE?</p>
+        <a href="#" class="read-more">Read More</a>
+        <p class="hidden-content">HOPE is a sanctuary where your voice matters. In a world that often overlooks the pain hidden behind closed doors, we provide a space for you to share your burden, to release your tears, and to find comfort in knowing that you are not alone. Our community is ready to listen, to offer support, and to walk alongside you on your journey to healing. We believe that every story holds immense power. When you share your experiences, you create a ripple effect that can inspire and uplift others who may be going through similar struggles. Your vulnerability has the potential to ignite hope in the hearts of those who have lost their way. Together, we can forge a path of resilience and renewal.</p>
+      </div>
+    </section>
+  
+    <section id="about">
+      <section class="about-section">
+        <div class="about-section-text">
+          <h2>About Us</h2><br>
+          <p>Hope is a platform where you can connect with real therapists for free, and it is also a platform where you can share all your unspoken words that were holding you back. You can meet new people who came here to heal with a ray of hope.</p><br><br>
+          <h2>Our Vision</h2><br>
+          <p>Our vision is to break down the barriers that prevent people from seeking the help they need by offering free therapy services and fostering a community of empathy and understanding. We envision a world where mental health support is easily accessible, stigma-free, and inclusive, ensuring that no one feels alone on their journey towards healing and personal growth.</p>
+        </div>
+        <div class="about-section-image">
+          <img src="priscilla-du-preez-aPa843frIzI-unsplash.jpg" alt="About Image">
+        </div>
+      </section>
+    </section>
+    
+    <section id="join">
+      <section class="connect">
+        <img src="naassom-azevedo-Q_Sei-TqSlc-unsplash.jpg" alt="Join image">
+        <div class="connect-text">
+          <h2>JOIN US</h2><br>
+          <p>We invite you to join our growing community at Hope and embark on a 
+            journey towards healing, growth, and hope. Together, we can create a 
+            world where mental health support is accessible to all and where no 
+            one has to face their struggles alone. Let's connect, share, and 
+            uplift each other, because we believe that hope can be found in the 
+            power of human connection.<br>
+           Remember, you are not alone. We are here for you.</p>
+        <br>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <br>
+        <p>
+         <h3>Community support</h3> <br>
+
+          In addition to connecting individuals with therapists, 
+          Hope aims to foster a sense of community and peer support. 
+          We provide a space where people can find solace in shared 
+          experiences and offer each other empathy and encouragement.
+          Whether you're looking for someone to talk to, seeking advice, or 
+          simply want to listen and offer support to others, 
+          our community is here to welcome you with open arms.
+        </p>
+        <br><br>
+        <p> <h3>Free Therapy Services</h3><br>
+
+          We understand that professional therapy can be costly and out of reach for many individuals. That's why Hope provides a unique opportunity for people to connect with licensed therapists who generously volunteer their time and expertise. Through our platform, users can schedule virtual sessions with qualified professionals, free of charge. We believe that no one should have to face life's challenges alone, and our therapists are here to offer guidance, support, and a listening ear.</p>
+    
+      </section>
+      <section id="contactus" class="contact">
+        <div class="content">
+          <h2>Contact Us</h2>
+          <p>Feel free to reach out to us if you have any queries.<br>You can contact us 24/7 at any flexible time.</p><br><br>
+            <div class="contactForm">
+              <form>
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                  <input type="text" name="" required="required">
+                  <span>Name</span>
+                </div>
+                <div class="inputBox">
+                  <input type="text" name="" required="required">
+                  <span>Email</span>
+                </div>
+                <div class="inputBox">
+                  <textarea required="required"></textarea>
+                  <span>Type your message</span>
+                </div>
+                <div class="inputBox">
+                  <input type="submit" name="" value="Send">
+                </div>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+            
+
+
+
+  
+  </body>
+</html>
