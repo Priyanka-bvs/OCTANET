@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500,600,700,800,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 15px 200px; /* Removed the space between 15 and px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+header .logo {
+  color: salmon;
+  font-size: 70px;
+  font-weight: 700; /* Fixed typo: font: weight 700px; to font-weight: 700; */
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation {
+  position: relative;
+}
+
+header .navigation .navigation-items a {
+  position: relative;
+  color: rgb(47, 21, 2);
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: seagreen;
+  margin-left: 30px;
+  transition: 0.4s ease;
+}
+
+header .navigation .navigation-items a:before {
+  content: '';
+  position: absolute;
+
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+  width: 100%;
+}
+
+section {
+  padding: 100px 200px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: rosybrown;
+}
+
+
+.home .content {
+  z-index: 888;
+  color: #fff;
+  width: 70%;
+  margin-top: 50px;
+}
+.home .content h1{
+    font-size:4em;
+    font-weight:900;
+    text-transform: uppercase;
+    letter-spacing:5px;
+    line-height:75px;
+    margin-bottom:40px;
+    color:gold;
+
+}
+.home .content h1 span{
+    font-size:1.2 em;
+    font-weight:600;
+    color:gold;
+}
+.home .content p{
+    margin-bottom: 65px;
+    color:black;
+}
+.home .content a{
+    background:black;
+    padding: 15px 35px;
+    color:bisque;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius :2px;
+}
+.connect .media-icons{
+    z-index: 888;
+    position:absolute;
+    right:30px;
+    display:flex;
+    flex-direction:column;
+    transition:0.5s ease;
+}
+.connect .media-icons a{
+    color:#000;
+    font-size:1.6em;
+}
+.connect .media-icons a:not(:last-child){
+    margin-bottom:20px;
+
+}
+.connect .media-icons a:hover{
+    transform:scale(1.5);
+
+
+}
+.home video{
+    z-index:000;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+
+}
+#about
+{
+  background-image: url("roland-denes-beprhhF780E-unsplash.jpg");
+  background-size: cover;
+  background-position: center;;
+}
+
+.about-section {
+  background-color:bisque;
+  display:flex;
+  align-items: center;
+  
+  object-fit: cover;
+}
+.hidden-content {
+  display: none;
+}
+
+.about-section-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-section-image {
+  flex: 1;
+  text-align: right;
+}
+
+.about-section-image img {
+  width: 80%;
+  height: auto;
+}
+#join {
+  background-color: rgb(247, 218, 104);
+  padding: 30px;
+}
+
+.connect {
+  display: flex;
+  align-items: center;
+}
+
+.connect img {
+  max-width: 50%;
+  height: 40%;
+  margin-right: 20px;
+}
+
+.connect-text {
+  flex: 1;
+  text-align: left;
+}
+
+
+
+@media (max-width:1040px)
+{
+    header{
+        padding:12px 20px;
+    }
+    section{
+        padding:12px 20px;
+    }
+    .home .media-icons {
+        right: 15px;
+        
+    }
+    header .navigation {
+        position: fixed;
+        width:100%;
+        height:100vh;
+        top:0;
+        left:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:#000;
+        
+    }
+    header .navigation.active{
+        position:fixed;
+        width:100%;
+        height:100vh;
+        top:0;
+        left:0;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        background:rgba(1,1,1,0.5);
+    }
+    header .navigation .navigation-items a{
+        color:#000;
+        font-size:1.2em;
+        margin:20px;
+
+    }
+    header .navigation .navigation-items a:before{
+        background:blanchedalmond;
+        height:5px;
+    }
+
+    header .navigation.active  .navigation-items{
+        background:sandybrown;
+        width:600px;
+        max-width:600px;
+        margin:20px;
+        padding:40px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        border-radius:5px;
+        box-shadow: 0 5px 25px rgb(1 1 1/20%);
+
+    }
+    .menu-btn{
+
+        background-size: 30px;;
+        background-position: center;
+        width:40px;
+        height:40px;
+        cursor:pointer;
+        transition:0.3s ease;
+
+
+    }
+    .menu-btn.active{
+        z-index:999;
+        background:url(close.png)no-repeat;
+        background-size:25px;
+        background-position: center;
+        transition:0.3s ease;
+
+    }
+
+}
+.heading{
+  text-align:center;
+  font-size:4rem;
+  color:seagreen;
+  padding:1rem;
+  margin:2rem 0;
+  background:salmon;
+}
+.about-section {
+  overflow: hidden;
+}
+
+.image {
+  float: left;
+  width: 40%; 
+  background-color: bisque;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  float: right;
+  width: 60%;
+}
+
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("priscilla-du-preez-nF8xhLMmg0c-unsplash.jpg");
+  background-size: cover;
+}
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #333  ;
+}
+.contact .content h3 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #333  ;
+}
+
+.contact .content p {
+  font-weight: 300;
+  color: black;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.container .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+
+
+.container .contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color:#fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.container .contactInfo .box .text h3 {
+  font-weight: 500;
+  color:black;
+}
+
+.contactForm {
+  width: 60%;
+  padding: 50px;
+  background:seashell;
+  position: relative;
+}
+
+.contactForm h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: black;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: black;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+  width: 100px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .contact {
+      padding: 50px;
+  }
+
+  .container {
+      flex-direction: column;
+  }
+
+  .container .contactInfo {
+      margin-bottom: 40px;
+  }
+
+  .container .contactInfo .contactForm {
+      width: 100%;
+  }
+}
